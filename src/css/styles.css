@@ -18,3 +18,39 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country {
+  display: flex;
+  align-items: center;
+}
+ 
+img {
+  margin-right: 10px;
+  width: 20px; 
+  height:20px;
+}
+
+p{
+  font-size: 20px;
+  line-height: 0.5;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+
+.div-first {
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  margin-left: 20px;
+}
+
+.all-countrys {
+  margin-left: 50px;
+}
+
