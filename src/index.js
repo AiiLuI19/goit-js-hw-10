@@ -16,14 +16,14 @@ refs.searchBoxInput.addEventListener("input", debounce(selectCountry, DEBOUNCE_D
 function selectCountry(evt) {
     evt.preventDefault();
     const valueText = evt.target.value.trim();
-
+        if (!valueText) {
+            return; 
+        }
     fetchCountries(valueText).then(response => {
         reset();
         renderCountries(response);
     }).catch(error => {
-        if (valueText !== '') {   
-                Notiflix.Report.failure("Oops, there is no country with that name");
-        }
+        Notiflix.Report.failure("Oops, there is no country with that name");
          reset();
     });
 };
